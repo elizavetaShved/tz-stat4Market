@@ -1,3 +1,51 @@
-<header class="gl-page-content header" id="header-host">
-  header
+<header class="header">
+  <div class="gl-page-content">
+    <div class="header__content-wrapper">
+      <div class="header__block header__block-left">
+        <div class="header__logo-container">
+          <a href="/" class="header__logo-wrapper">
+            <svg aria-hidden="true" class="header__logo-icon gl-hg-hide">
+              <use xlink:href="#logo"/>
+            </svg>
+            <svg aria-hidden="true" class="header__logo-icon gl-hg-show">
+              <use xlink:href="#logo-mobile"/>
+            </svg>
+          </a>
+
+          <div class="header__logo-hint gl-md-hide">
+            Надежный сервис аналитики для поставщиков на маркетплейсы
+          </div>
+        </div>
+
+        <!-- todo добавить селект-->
+        <div class="header__link gl-hg-hide">
+          Аналитика
+        </div>
+
+        <a href="" class="header__link gl-hg-hide">
+          Обучение
+        </a>
+      </div>
+
+      <div class="header__block">
+        <a href="tel:84994503141" class="header__link header__link-tel gl-hg-hide">
+          <svg aria-hidden="true" class="header__link-tel-icon">
+            <use xlink:href="#tel"/>
+          </svg>
+          8 (499) 450-31-41
+        </a>
+
+        <button type="button" class="header__btn-auth">
+          <svg aria-hidden="true" class="header__btn-auth-icon">
+            <use xlink:href="#auth-btn"/>
+          </svg>
+          Войти
+        </button>
+
+        <button type="button" class="header__btn-burger-wrapper">
+          <span class="header__btn-burger gl-hg-show"></span>
+        </button>
+      </div>
+    </div>
+  </div>
 </header>

@@ -1,7 +1,35 @@
 @import "common/extends";
+@import "common/sizes";
 
 .gl-layout-wrapper {
   @extend %set-max-height;
+  height: 100%;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: -198px;
+    left: -682px;
+    width: 782px;
+    height: 782px;
+    background-image: url("../assets/icons/layout-circle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
+    z-index: calc(var(--z-index-header) + 1);
+
+    @include for-fl-down {
+      top: -100px;
+      left: -412px;
+      width: 434px;
+      height: 434px;
+    }
+
+    @include for-md-down {
+      content: none;
+    }
+  }
 }
 
 .gl-layout-content {

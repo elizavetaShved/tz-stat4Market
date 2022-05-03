@@ -23,7 +23,7 @@ const path = require('path');
 
 gulp.task('sprite', function () {
 	return gulp
-		.src('src/img/icons/*.svg')
+		.src('src/sprite-icons/*.svg')
 		.pipe(plumber())
 		.pipe(
 			svgSprite({
@@ -109,7 +109,7 @@ gulp.task('serve', function () {
 	});
 	gulp.watch(['./src/**/*.hbs', './src/pages/data**/*.json'], gulp.series('handlebars'));
 
-	gulp.watch('./src/img/icons/*svg', gulp.series('sprite', 'handlebars'));
+	gulp.watch('./src/sprite-icons/*svg', gulp.series('sprite', 'handlebars'));
 
 	gulp.watch('./src/scss/**/*.scss', gulp.series('styles'));
 	gulp.watch('./src/js/**/*.js', gulp.series('scripts'));

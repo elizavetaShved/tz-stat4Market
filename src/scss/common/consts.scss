@@ -2,9 +2,15 @@
 
 :root {
   --page-content-padding: 40px;
-  --font-riffic: 'Lato';
+  --font-lato: 'Lato';
   --main-text-color: #331A2F;
   --main-color: #CF51CE;
+
+  --transition-duration-short: 200ms;
+  --transition-duration-fast: 350ms;
+  --border-radius-middle: 12px;
+
+  --z-index-header: 2;
 
   /* main h1 */
   --fw-h1: bold;

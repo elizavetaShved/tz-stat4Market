@@ -18,17 +18,13 @@
 </div>
 
 <div class="gl-layout-wrapper">
-  <div class="gl-layout-header">
-    {{> layout-header }}
-  </div>
+  {{> layout-header }}
 
   <main class="gl-layout-content">
     {{#block "main"}}{{/block}}
   </main>
 
-  <div class="gl-layout-footer">
-    {{> layout-footer }}
-  </div>
+  {{> layout-footer }}
 
   {{#if script }}
     <script src="js/{{script}}.js"></script>

@@ -1,0 +1,270 @@
+@import "src/scss/common/sizes";
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  padding: 22px 0;
+  overflow: hidden;
+  z-index: var(--z-index-header);
+
+  &__content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-md-down {
+      align-items: flex-start;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+
+    & + & {
+      margin-left: 40px;
+
+      @include for-md-down {
+        margin-left: 24px;
+      }
+    }
+
+    &-left {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__logo-container {
+    display: flex;
+    margin-right: 32px;
+
+    @include for-fl-down {
+      margin-right: 28px;
+    }
+
+    @include for-hg-down {
+      margin-right: 0;
+    }
+  }
+
+  &__logo-wrapper {
+    padding: 10px;
+    margin: -10px
+  }
+
+  &__logo-icon {
+    width: 236px;
+    height: 70px;
+    object-fit: contain;
+
+    @include for-fl-down {
+      width: 128px;
+      height: 38px;
+    }
+
+    @include for-hg-down {
+      width: 188px;
+      height: 62px;
+    }
+
+    @include for-md-down {
+      width: 140px;
+      height: 46px;
+    }
+  }
+
+  &__logo-hint {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 12px 0 12px calc(26px - 1px);
+    border-left: 1px solid rgba(51, 26, 47, 0.5);
+    margin-left: 20px;
+    width: 230px;
+
+    @include for-fl-down {
+      font-size: 10px;
+      line-height: 14px;
+      padding: 10px 0 10px calc(19px - 1px);
+      margin-left: 14px;
+      width: 158px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    padding: 24px;
+    margin: -24px;
+    transition: all var(--transition-duration-short);
+
+    @include for-fl-down {
+      font-size: 18px;
+    }
+
+    & + & {
+      margin-left: 50px;
+
+      @include for-fl-down {
+        margin-left: 40px;
+      }
+
+      @include for-bg-down {
+        margin-left: 20px;
+      }
+    }
+
+    &:hover {
+      color: var(--main-color);
+    }
+
+    &-tel {
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      margin-right: 90px;
+
+      @include for-bg-down {
+        margin-right: 40px;
+      }
+
+      &:hover {
+        .header__link-tel-icon {
+          fill: var(--main-color);
+        }
+      }
+    }
+
+    &-tel-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+      fill: var(--main-text-color);
+      transition: fill var(--transition-duration-short);
+
+      @include for-fl-down {
+        width: 20px;
+        height: 20px;
+        margin-right: 2px;
+      }
+    }
+  }
+
+  &__btn-auth {
+    background-color: var(--main-color);
+    border-radius: var(--border-radius-middle);
+    padding: 4px 32px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 35px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    transition: opacity var(--transition-duration-short);
+
+    @include for-fl-down {
+      font-size: 18px;
+    }
+
+    @include for-hg-down {
+      font-size: 20px;
+    }
+
+    @include for-md-down {
+      font-size: 14px;
+      line-height: 28px;
+      padding: 4px 20px;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__btn-auth-icon {
+    width: 24px;
+    height: 24px;
+    fill: #FFFFFF;
+    margin-right: 14px;
+
+    @include for-fl-down {
+      width: 20px;
+      height: 20px;
+    }
+
+    @include for-md-down {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+    }
+  }
+
+  $burger-size: 56px; // размеры кнопки
+  $burger-line-width: 42px; // ширина линии
+  $burger-line-width-small: 32px; // ширина линии нижней
+  $burger-line-height: 4px; // высота линии
+  $burger-line-margin: 8px; // отступ между линиями
+  $burger-color: var(--main-color); // цвет линий
+  $burger-border-radius: 4px; // border-radius линий
+  $burger-size-stock: calc((#{$burger-size} - #{$burger-line-width}) / 2 * -1); // расстояние, которое остается с каждой стороны в запасе для кликабельности
+
+  &__btn-burger-wrapper {
+    width: $burger-size;
+    height: $burger-size;
+    margin: $burger-size-stock $burger-size-stock $burger-size-stock calc(#{$burger-size-stock} + 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include for-md-down {
+      margin-left: calc(#{$burger-size-stock} + 20px);
+    }
+  }
+
+  &__btn-burger {
+    /* средняя линия бургера */
+    display: block;
+    width: $burger-line-width;
+    height: $burger-line-height;
+    background-color: $burger-color;
+    border-radius: $burger-border-radius;
+
+    /* верхняя и нижняя линии бургера */
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      transition: all var(--transition-duration-short) ease;
+      background-color: $burger-color;
+      border-radius: $burger-border-radius;
+      height: $burger-line-height;
+    }
+
+    &:before {
+      top: calc(
+        (#{$burger-size} -
+        #{$burger-line-height} * 3 -
+        #{$burger-line-margin} * 2) / 2
+      );
+      width: $burger-line-width;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
+    &:after {
+      width: $burger-line-width-small;
+      bottom: calc(
+        (#{$burger-size} -
+        #{$burger-line-height} * 3 -
+        #{$burger-line-margin} * 2) / 2
+      );
+      right: 50%;
+      transform: translateX(calc(50% + ((#{$burger-line-width} - #{$burger-line-width-small}) / 2)));
+    }
+  }
+}

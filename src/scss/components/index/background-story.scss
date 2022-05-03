@@ -1,0 +1,80 @@
+@import "src/scss/common/sizes";
+
+.background-story {
+  margin-bottom: 140px;
+
+  @include for-hg-down {
+    margin-bottom: 120px;
+  }
+
+  @include for-md-down {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    margin-bottom: 84px;
+
+    @include for-hg-down {
+      margin-bottom: 80px;
+    }
+
+    @include for-md-down {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__info-block {
+    display: flex;
+    align-items: center;
+
+    & + & {
+      @include for-hg-down {
+        margin-top: 60px;
+      }
+
+      @include for-md-down {
+        margin-top: 40px;
+      }
+    }
+
+    &_reverse {
+      flex-direction: row-reverse;
+    }
+
+    @include for-md-down {
+      flex-direction: column;
+    }
+  }
+
+  &__info-block-icon {
+    flex: 0 0 474px;
+    width: 474px;
+    height: 474px;
+    margin: 0 80px;
+
+    @include for-vt-down {
+      flex: 0 0 358px;
+      width: 358px;
+      height: 358px;
+    }
+
+    @include for-hg-down {
+      flex: 0 0 270px;
+      width: 270px;
+      height: 270px;
+      margin: 0 40px;
+    }
+
+    @include for-md-down {
+      margin: 0 0 30px 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

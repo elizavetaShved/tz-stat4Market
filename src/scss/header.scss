@@ -3,6 +3,7 @@
 .header {
   position: sticky;
   top: 0;
+  flex: 0 0 auto;
   background-color: #FFFFFF;
   padding: 22px 0;
   overflow: hidden;
@@ -39,7 +40,7 @@
     display: flex;
     margin-right: 32px;
 
-    @include for-fl-down {
+    @include for-vt-down {
       margin-right: 28px;
     }
 
@@ -58,7 +59,7 @@
     height: 70px;
     object-fit: contain;
 
-    @include for-fl-down {
+    @include for-vt-down {
       width: 128px;
       height: 38px;
     }
@@ -83,7 +84,7 @@
     margin-left: 20px;
     width: 230px;
 
-    @include for-fl-down {
+    @include for-vt-down {
       font-size: 10px;
       line-height: 14px;
       padding: 10px 0 10px calc(19px - 1px);
@@ -101,14 +102,14 @@
     margin: -24px;
     transition: all var(--transition-duration-short);
 
-    @include for-fl-down {
+    @include for-vt-down {
       font-size: 18px;
     }
 
     & + & {
       margin-left: 50px;
 
-      @include for-fl-down {
+      @include for-vt-down {
         margin-left: 40px;
       }
 
@@ -145,7 +146,7 @@
       fill: var(--main-text-color);
       transition: fill var(--transition-duration-short);
 
-      @include for-fl-down {
+      @include for-vt-down {
         width: 20px;
         height: 20px;
         margin-right: 2px;
@@ -166,7 +167,7 @@
     align-items: center;
     transition: opacity var(--transition-duration-short);
 
-    @include for-fl-down {
+    @include for-vt-down {
       font-size: 18px;
     }
 
@@ -191,7 +192,7 @@
     fill: #FFFFFF;
     margin-right: 14px;
 
-    @include for-fl-down {
+    @include for-vt-down {
       width: 20px;
       height: 20px;
     }

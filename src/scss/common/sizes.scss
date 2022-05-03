@@ -1,4 +1,5 @@
 $full: 1920px;
+$vast: 1600px;
 $big: 1280px;
 $huge: 1024px;
 $middle: 760px;
@@ -13,6 +14,18 @@ $xs: 360px;
 
 @mixin for-fl-down {
   @media screen and (max-width: $full - 1) {
+    @content;
+  }
+}
+
+@mixin for-vt-up {
+  @media screen and (min-width: $vast) {
+    @content;
+  }
+}
+
+@mixin for-vt-down {
+  @media screen and (max-width: $vast - 1) {
     @content;
   }
 }
@@ -85,6 +98,18 @@ $xs: 360px;
 
 .gl-fl-hide {
   @include for-fl-down {
+    display: none !important;
+  }
+}
+
+.gl-vt-show {
+  @include for-vt-up {
+    display: none !important;
+  }
+}
+
+.gl-vt-hide {
+  @include for-vt-down {
     display: none !important;
   }
 }

@@ -53,7 +53,7 @@
   --fs-t2: 25px;
   --lh-t2: 160%;
 
-  @include for-bg-down {
+  @include for-vt-down {
     --fs-h1: 46px;
     --lh-h1: 65px;
     --fs-h2: 40px;
@@ -67,7 +67,7 @@
     --fs-t2: 16px;
   }
 
-  @include for-md-down {
+  @include for-hg-down {
     --page-content-padding: 16px;
   }
 

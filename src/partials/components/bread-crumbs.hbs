@@ -1,17 +1,19 @@
 <section class="bread-crumbs">
-  <ul class="bread-crumbs__list">
-    {{#each bread-crumbs}}
-      <li class="bread-crumbs__item">
-        {{#if this.linkPlug}}
-          <span class="bread-crumbs__link bread-crumbs__link-plug">
-            {{ this.name }}
-          </span>
-        {{else}}
-          <a href="{{ this.link }}" class="bread-crumbs__link">
-            {{ this.name }}
-          </a>
-        {{/if}}
-      </li>
-    {{/each}}
-  </ul>
+  <div class="gl-page-content">
+    <ul class="bread-crumbs__list">
+      {{#each bread-crumbs}}
+        <li class="bread-crumbs__item">
+          {{#if this.linkPlug}}
+            <span class="bread-crumbs__link bread-crumbs__link-plug">
+              {{ this.name }}
+            </span>
+          {{else}}
+            <a href="{{ this.link }}" class="bread-crumbs__link">
+              {{ this.name }}
+            </a>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </section>

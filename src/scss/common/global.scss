@@ -3,7 +3,7 @@
 .gl-page-content {
   padding-left: var(--page-content-padding);
   padding-right: var(--page-content-padding);
-  max-width: 1320px;
+  max-width: 1530px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -48,10 +48,22 @@
   font-weight: var(--fw-t1);
   font-size: var(--fs-t1);
   line-height: var(--lh-t1);
+
+  & + & {
+    margin-top: 16px;
+
+    @include for-md-down {
+      margin-top: 10px;
+    }
+  }
 }
 
 .gl-t2 {
   font-weight: var(--fw-t2);
   font-size: var(--fs-t2);
   line-height: var(--lh-t2);
+}
+
+.gl-mark-main-color {
+  color: var(--main-color);
 }

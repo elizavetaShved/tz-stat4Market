@@ -92,6 +92,7 @@
   --transition-duration-short: 200ms;
   --transition-duration-fast: 350ms;
   --border-radius-middle: 12px;
+  --border-radius-large: 16px;
   --z-index-header: 2;
   /* main h1 */
   --fw-h1: bold;
@@ -123,7 +124,7 @@
   --lh-t1: 160%;
   /* small text */
   --fw-t2: 400;
-  --fs-t2: 25px;
+  --fs-t2: 18px;
   --lh-t2: 160%;
 }
 @media screen and (max-width: 1599px) {
@@ -606,6 +607,25 @@ nav ul {
 @media screen and (max-width: 759px) {
   .gl-layout-wrapper:before {
     content: none;
+  }
+}
+
+.gl-layout-content {
+  padding-bottom: 130px;
+}
+@media screen and (max-width: 1599px) {
+  .gl-layout-content {
+    padding-bottom: 120px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .gl-layout-content {
+    padding-bottom: 84px;
+  }
+}
+@media screen and (max-width: 759px) {
+  .gl-layout-content {
+    padding-bottom: 70px;
   }
 }
 
@@ -1411,4 +1431,225 @@ nav ul {
 }
 .background-story__info-block-icon:last-child {
   margin-right: 0;
+}
+
+@media screen and (min-width: 1920px) {
+  .gl-fl-show {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .gl-fl-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .gl-vt-show {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .gl-vt-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .gl-bg-show {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .gl-bg-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gl-hg-show {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .gl-hg-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .gl-md-show {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .gl-md-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .gl-sm-show {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .gl-sm-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .gl-xs-show {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .gl-xs-hide {
+    display: none !important;
+  }
+}
+
+.sales-training__header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sales-training__title {
+  margin-bottom: 30px;
+  max-width: 678px;
+  text-align: center;
+}
+@media screen and (max-width: 1023px) {
+  .sales-training__title {
+    margin-bottom: 22px;
+  }
+}
+.sales-training__title .mark-wrapper {
+  position: relative;
+}
+.sales-training__title .mark-wrapper:before {
+  position: absolute;
+  content: "";
+  bottom: -12px;
+  left: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(264.91deg, #7C4EAB 0.73%, #DD51D4 95.85%);
+  border-radius: 5px;
+}
+@media screen and (max-width: 759px) {
+  .sales-training__title .mark-wrapper:before {
+    bottom: -10px;
+    height: 4px;
+  }
+}
+.sales-training__title .mark {
+  color: var(--main-color);
+}
+.sales-training__subtitle {
+  margin-bottom: 84px;
+  max-width: 846px;
+  text-align: center;
+}
+@media screen and (max-width: 1023px) {
+  .sales-training__subtitle {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .sales-training__subtitle {
+    margin-bottom: 50px;
+  }
+}
+.sales-training__grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 122px;
+}
+@media screen and (max-width: 1599px) {
+  .sales-training__grid-wrapper {
+    grid-gap: 84px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .sales-training__grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+  }
+}
+@media screen and (max-width: 759px) {
+  .sales-training__grid-wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+}
+@media screen and (max-width: 759px) {
+  .sales-training__grid-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.sales-training__grid-item-icon-wrapper {
+  background: var(--main-color);
+  -webkit-box-shadow: 0 4px 25px rgba(234, 93, 187, 0.25);
+          box-shadow: 0 4px 25px rgba(234, 93, 187, 0.25);
+  border-radius: var(--border-radius-large);
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1599px) {
+  .sales-training__grid-item-icon-wrapper {
+    margin-bottom: 20px;
+  }
+}
+.sales-training__grid-item-icon {
+  width: 48px;
+  height: 48px;
+}
+@media screen and (max-width: 1599px) {
+  .sales-training__grid-item-icon {
+    width: 38px;
+    height: 38px;
+  }
+}
+.sales-training__grid-item-caption {
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+@media screen and (max-width: 759px) {
+  .sales-training__grid-item-caption {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 759px) {
+  .sales-training__grid-item-value {
+    text-align: center;
+  }
 }

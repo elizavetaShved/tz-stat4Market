@@ -10,6 +10,7 @@
   --transition-duration-short: 200ms;
   --transition-duration-fast: 350ms;
   --border-radius-middle: 12px;
+  --border-radius-large: 16px;
 
   --z-index-header: 2;
 
@@ -50,7 +51,7 @@
 
   /* small text */
   --fw-t2: 400;
-  --fs-t2: 25px;
+  --fs-t2: 18px;
   --lh-t2: 160%;
 
   @include for-vt-down {

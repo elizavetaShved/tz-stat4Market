@@ -1,0 +1,32 @@
+<section class="sales-training">
+  <div class="gl-page-content">
+    <div class="sales-training__header-wrapper">
+      <h2 class="sales-training__title gl-h2">
+        Обучение по продажам на маркетплейсах от <span class="mark-wrapper">stat<span class="mark">4</span>market</span>
+      </h2>
+
+      <div class="sales-training__subtitle gl-t1">
+        «Увеличение реальной прибыли, конкретика и ключевые инструменты, которые дают результат» — на этом тезисе созданы
+        наши курсы
+      </div>
+    </div>
+
+    <ul class="sales-training__grid-wrapper">
+      {{#each sales-training }}
+        <li class="sales-training__grid-item">
+          <div class="sales-training__grid-item-icon-wrapper">
+            <svg aria-hidden="true" class="sales-training__grid-item-icon">
+              <use xlink:href="#{{this.icon}}"/>
+            </svg>
+          </div>
+          <div class="sales-training__grid-item-caption gl-t1">
+            {{this.caption}}
+          </div>
+          <div class="sales-training__grid-item-value gl-t2">
+            {{this.value}}
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

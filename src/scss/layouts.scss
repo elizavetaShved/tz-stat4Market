@@ -34,4 +34,17 @@
 
 .gl-layout-content {
   @extend %set-max-height;
+  padding-bottom: 130px;
+
+  @include for-vt-down {
+    padding-bottom: 120px;
+  }
+
+  @include for-hg-down {
+    padding-bottom: 84px;
+  }
+
+  @include for-md-down {
+    padding-bottom: 70px;
+  }
 }

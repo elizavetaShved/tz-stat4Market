@@ -1,26 +1,3 @@
-:root {
-  --page-content-padding-fl: 40px;
-  --page-content-padding-md-down: 30px;
-  --page-content-padding-small: 20px;
-  --page-content-padding-xxs-down: 16px;
-  --font-riffic: "Riffic";
-  --main-text-color: #000;
-}
-
-@font-face {
-  font-family: "Riffic";
-  src: url("../assets/fonts/Riffic-Bold.woff2") format("woff2"), url("../assets/fonts/Riffic-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Calibri";
-  src: url("../assets/fonts/Calibri.woff2") format("woff2"), url("../assets/fonts/Calibri.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
 @media screen and (min-width: 1150px) {
   .gl-fl-show {
     display: none !important;
@@ -81,33 +58,43 @@
   }
 }
 
-.gl__page-content {
-  padding-left: var(--page-content-padding-fl);
-  padding-right: var(--page-content-padding-fl);
+:root {
+  --page-content-padding: 32px;
+  --font-riffic: "Lato";
+  --main-text-color: #000;
+  --main-color: #CF51CE;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/subset-Lato-Regular.woff2") format("woff2"), url("../../assets/fonts/subset-Lato-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/subset-Lato-Semibold.woff2") format("woff2"), url("../../assets/fonts/subset-Lato-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../assets/fonts/subset-Lato-Bold.woff2") format("woff2"), url("../../assets/fonts/subset-Lato-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.gl-page-content {
+  padding-left: var(--page-content-padding);
+  padding-right: var(--page-content-padding);
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (max-width: 959px) {
-  .gl__page-content {
-    padding-left: var(--page-content-padding-md-down);
-    padding-right: var(--page-content-padding-md-down);
-  }
-}
-@media screen and (max-width: 759px) {
-  .gl__page-content {
-    padding-left: var(--page-content-padding-small);
-    padding-right: var(--page-content-padding-small);
-  }
-}
-@media screen and (max-width: 359px) {
-  .gl__page-content {
-    padding-left: var(--page-content-padding-xxs-down);
-    padding-right: var(--page-content-padding-xxs-down);
-  }
-}
 
-.gl__layout-wrapper {
+.gl-layout-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,27 +106,27 @@
   min-height: 100vh;
 }
 
-.gl__layout-content {
+.gl-layout-content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
 }
 
 html {
-  height: -webkit-fill-available;
+  -webkit-text-size-adjust: 100%;
 }
 
 html, body {
   background-repeat: no-repeat;
-  color: var(--main-text-color);
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  height: 100%;
 }
 
 *, *:before, *:after {
-  font-family: var(--font-riffic), sans-serif;
+  font-family: var(--font-riffic);
   outline: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -160,9 +147,21 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, 
 
 body {
   overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--main-text-color);
+}
+
+#__next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
 }
 
 a {
@@ -170,15 +169,15 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-a:visited {
-  color: inherit;
-}
 
 button {
   cursor: pointer;
   background-color: transparent;
   border: none;
   padding: 0;
+}
+button[disabled] {
+  cursor: default;
 }
 
 table {
@@ -208,6 +207,17 @@ input[type=text], input[type=email], input[type=phone] {
   text-overflow: ellipsis;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number]:hover, input[type=number]:focus {
+  -moz-appearance: number-input;
+}
+
 sub {
   vertical-align: sub;
   font-size: smaller;
@@ -226,62 +236,12 @@ nav ul {
   list-style: none;
 }
 
-@media screen and (min-width: 1150px) {
-  .gl-fl-show {
-    display: none !important;
-  }
+::-moz-selection {
+  background-color: var(--main-color);
+  color: #fff;
 }
 
-@media screen and (max-width: 1149px) {
-  .gl-fl-hide {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .gl-md-show {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 959px) {
-  .gl-md-hide {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 760px) {
-  .gl-sm-show {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 759px) {
-  .gl-sm-hide {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 560px) {
-  .gl-xs-show {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 559px) {
-  .gl-xs-hide {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 360px) {
-  .gl-xxs-show {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 359px) {
-  .gl-xxs-hide {
-    display: none !important;
-  }
+::selection {
+  background-color: var(--main-color);
+  color: #fff;
 }

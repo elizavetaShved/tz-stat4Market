@@ -1,0 +1,79 @@
+@import './sizes';
+
+:root {
+  --page-content-padding: 40px;
+  --font-riffic: 'Lato';
+  --main-text-color: #331A2F;
+  --main-color: #CF51CE;
+
+  /* main h1 */
+  --fw-h1: bold;
+  --fs-h1: 56px;
+  --lh-h1: 80px;
+
+  /* main h2 */
+  --fw-h2: bold;
+  --fs-h2: 48px;
+  --lh-h2: 64px;
+
+  /* main h3 */
+  --fw-h3: 600;
+  --fs-h3: 42px;
+  --lh-h3: 55px;
+
+  /* main h4 */
+  --fw-h4: 600;
+  --fs-h4: 35px;
+  --lh-h4: 45px;
+
+  /* main h5 */
+  --fw-h5: 600;
+  --fs-h5: 24px;
+  --lh-h5: 150%;
+
+  /* main h6 */
+  --fw-h6: 600;
+  --fs-h6: 18px;
+  --lh-h6: 25;
+
+  /* big text */
+  --fw-t1: 400;
+  --fs-t1: 25px;
+  --lh-t1: 160%;
+
+  /* small text */
+  --fw-t2: 400;
+  --fs-t2: 25px;
+  --lh-t2: 160%;
+
+  @include for-bg-down {
+    --fs-h1: 46px;
+    --lh-h1: 65px;
+    --fs-h2: 40px;
+    --lh-h2: 50px;
+    --fs-h3: 38px;
+    --fs-h4: 30px;
+    --fs-h5: 20px;
+    --fs-h6: 16px;
+    --lh-h6: 150%;
+    --fs-t1: 20px;
+    --fs-t2: 16px;
+  }
+
+  @include for-md-down {
+    --page-content-padding: 16px;
+  }
+
+  @include for-sm-down {
+    --fs-h1: 26px;
+    --lh-h1: 150%;
+    --fs-h2: 24px;
+    --lh-h2: 150%;
+    --fs-h3: 22px;
+    --lh-h3: 150%;
+    --fs-h4: 20px;
+    --lh-h4: 150%;
+    --fs-h5: 18px;
+    --fs-t1: 18px;
+  }
+}

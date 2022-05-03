@@ -1,0 +1,9 @@
+@import "common/extends";
+
+.gl-layout-wrapper {
+  @extend %set-max-height;
+}
+
+.gl-layout-content {
+  @extend %set-max-height;
+}

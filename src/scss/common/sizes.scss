@@ -1,8 +1,21 @@
-$big: 1150px;
-$middle: 960px;
-$small: 760px;
-$xs: 560px;
-$xxs: 360px;
+$full: 1920px;
+$big: 1280px;
+$huge: 1024px;
+$middle: 760px;
+$small: 560px;
+$xs: 360px;
+
+@mixin for-fl-up {
+  @media screen and (min-width: $full) {
+    @content;
+  }
+}
+
+@mixin for-fl-down {
+  @media screen and (max-width: $full - 1) {
+    @content;
+  }
+}
 
 @mixin for-bg-up {
   @media screen and (min-width: $big) {
@@ -12,6 +25,18 @@ $xxs: 360px;
 
 @mixin for-bg-down {
   @media screen and (max-width: $big - 1) {
+    @content;
+  }
+}
+
+@mixin for-hg-up {
+  @media screen and (min-width: $huge) {
+    @content;
+  }
+}
+
+@mixin for-hg-down {
+  @media screen and (max-width: $huge - 1) {
     @content;
   }
 }
@@ -52,26 +77,38 @@ $xxs: 360px;
   }
 }
 
-@mixin for-xxs-up {
-  @media screen and (min-width: $xxs) {
-    @content;
-  }
-}
-
-@mixin for-xxs-down {
-  @media screen and (max-width: $xxs - 1) {
-    @content;
-  }
-}
-
 .gl-fl-show {
-  @include for-bg-up {
+  @include for-fl-up {
     display: none !important;
   }
 }
 
 .gl-fl-hide {
+  @include for-fl-down {
+    display: none !important;
+  }
+}
+
+.gl-bg-show {
+  @include for-bg-up {
+    display: none !important;
+  }
+}
+
+.gl-bg-hide {
   @include for-bg-down {
+    display: none !important;
+  }
+}
+
+.gl-hg-show {
+  @include for-hg-up {
+    display: none !important;
+  }
+}
+
+.gl-hg-hide {
+  @include for-hg-down {
     display: none !important;
   }
 }
@@ -108,18 +145,6 @@ $xxs: 360px;
 
 .gl-xs-hide {
   @include for-xs-down {
-    display: none !important;
-  }
-}
-
-.gl-xxs-show {
-  @include for-xxs-up {
-    display: none !important;
-  }
-}
-
-.gl-xxs-hide {
-  @include for-xxs-down {
     display: none !important;
   }
 }

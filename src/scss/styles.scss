@@ -1,6 +1,8 @@
-@import 'consts';
-@import 'controls';
-@import 'fontface';
-@import 'global';
-@import 'reset';
-@import 'sizes';
+@import 'common/consts';
+@import 'common/controls';
+@import 'common/fontface';
+@import 'common/global';
+@import 'common/reset';
+@import 'common/extends';
+
+@import 'layouts';

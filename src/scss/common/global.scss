@@ -1,0 +1,57 @@
+@import './sizes';
+
+.gl-page-content {
+  padding-left: var(--page-content-padding);
+  padding-right: var(--page-content-padding);
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gl-h1 {
+  font-weight: var(--fw-h1);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+}
+
+.gl-h2 {
+  font-weight: var(--fw-h2);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+}
+
+.gl-h3 {
+  font-weight: var(--fw-h3);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+}
+
+.gl-h4 {
+  font-weight: var(--fw-h4);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+}
+
+.gl-h5 {
+  font-weight: var(--fw-h5);
+  font-size: var(--fs-h5);
+  line-height: var(--lh-h5);
+}
+
+.gl-h6 {
+  font-weight: var(--fw-h6);
+  font-size: var(--fs-h6);
+  line-height: var(--lh-h6);
+}
+
+.gl-t1 {
+  font-weight: var(--fw-t1);
+  font-size: var(--fs-t1);
+  line-height: var(--lh-t1);
+}
+
+.gl-t2 {
+  font-weight: var(--fw-t2);
+  font-size: var(--fs-t2);
+  line-height: var(--lh-t2);
+}

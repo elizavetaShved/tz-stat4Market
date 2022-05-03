@@ -18,7 +18,7 @@
     position: relative;
   }
 
-  &__top-block {
+  &__content-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
@@ -32,7 +32,7 @@
     }
   }
 
-  &__top-block-title {
+  &__title {
     @include for-hg-down {
       grid-column: 1 / 3;
       grid-row: 1;
@@ -45,7 +45,7 @@
     }
   }
 
-  &__top-block-image {
+  &__image {
     flex: 0 0 620px;
     width: 620px;
     height: 604px;

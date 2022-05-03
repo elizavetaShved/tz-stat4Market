@@ -1,3 +1,13 @@
 {
-    "title": "Tile"
+  "title": "Обучение",
+  "bread-crumbs": [
+    {
+      "name": "Главная",
+      "link": ""
+    },
+    {
+      "name": "Обучение",
+      "linkPlug": true
+    }
+  ]
 }

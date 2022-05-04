@@ -85,7 +85,6 @@
 
 :root {
   --page-content-padding: 40px;
-  --font-lato: "Lato", sans-serif;
   --main-text-color: #331A2F;
   --main-color: #CF51CE;
   --grey-translucent-color: rgba(51, 26, 47, .5);
@@ -349,7 +348,7 @@ html, body {
 }
 
 *, *:before, *:after {
-  font-family: var(--font-lato);
+  font-family: "Lato", sans-serif;
   outline: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

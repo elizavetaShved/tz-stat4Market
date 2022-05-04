@@ -1953,7 +1953,6 @@ nav ul {
 }
 @media screen and (max-width: 759px) {
   .introductory-block {
-    padding-top: 44px;
     margin-bottom: 84px;
     position: relative;
   }

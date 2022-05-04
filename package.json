@@ -33,6 +33,7 @@
     "moment": "^2.29.3",
     "parsleyjs": "^2.9.2",
     "rellax": "^1.12.1",
+    "slim-select": "^1.27.1",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^8.1.4"
   },

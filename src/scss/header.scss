@@ -1,22 +1,37 @@
 @import "src/scss/common/sizes";
 
+%header-link-and-select {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  transition: all var(--transition-duration-short);
+
+  @include for-vt-down {
+    font-size: 18px;
+  }
+
+  @include for-bg-down {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 .header {
   position: sticky;
   top: 0;
   flex: 0 0 auto;
   background-color: #FFFFFF;
   padding: 22px 0;
-  overflow: hidden;
   z-index: var(--z-index-header);
+
+  &__with-shadow {
+    box-shadow: 0 0 14px 2px rgba(0, 0, 0, .08);
+  }
 
   &__content-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @include for-md-down {
-      align-items: flex-start;
-    }
   }
 
   &__block {
@@ -38,6 +53,7 @@
 
   &__logo-container {
     display: flex;
+    align-items: center;
     margin-right: 32px;
 
     @include for-vt-down {
@@ -55,23 +71,28 @@
   }
 
   &__logo-icon {
-    width: 236px;
-    height: 70px;
+    width: 240px;
+    height: 58px;
     object-fit: contain;
 
     @include for-vt-down {
-      width: 128px;
-      height: 38px;
+      width: 187px;
+      height: 44px;
+    }
+
+    @include for-bg-down {
+      width: 140px;
+      height: 32px;
     }
 
     @include for-hg-down {
-      width: 188px;
-      height: 62px;
+      width: 180px;
+      height: 40px;
     }
 
     @include for-md-down {
       width: 140px;
-      height: 46px;
+      height: 32px;
     }
   }
 
@@ -93,19 +114,7 @@
     }
   }
 
-  &__link {
-    display: inline-block;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 35px;
-    padding: 24px;
-    margin: -24px;
-    transition: all var(--transition-duration-short);
-
-    @include for-vt-down {
-      font-size: 18px;
-    }
-
+  &__control {
     & + & {
       margin-left: 50px;
 
@@ -117,6 +126,13 @@
         margin-left: 20px;
       }
     }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 24px;
+    margin: -24px;
+    @extend %header-link-and-select;
 
     &:hover {
       color: var(--main-color);
@@ -126,11 +142,6 @@
       white-space: nowrap;
       display: flex;
       align-items: center;
-      margin-right: 90px;
-
-      @include for-bg-down {
-        margin-right: 40px;
-      }
 
       &:hover {
         .header__link-tel-icon {
@@ -166,13 +177,19 @@
     display: flex;
     align-items: center;
     transition: opacity var(--transition-duration-short);
+    margin-left: 90px;
 
     @include for-vt-down {
       font-size: 18px;
     }
 
+    @include for-bg-down {
+      margin-left: 40px;
+    }
+
     @include for-hg-down {
       font-size: 20px;
+      margin-left: 0;
     }
 
     @include for-md-down {

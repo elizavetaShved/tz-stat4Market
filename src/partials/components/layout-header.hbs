@@ -1,14 +1,11 @@
-<header class="header">
+<header class="header" id="header-host">
   <div class="gl-page-content">
     <div class="header__content-wrapper">
       <div class="header__block header__block-left">
         <div class="header__logo-container">
           <a href="/" class="header__logo-wrapper">
-            <svg aria-hidden="true" class="header__logo-icon gl-hg-hide">
+            <svg aria-hidden="true" class="header__logo-icon">
               <use xlink:href="#logo"/>
-            </svg>
-            <svg aria-hidden="true" class="header__logo-icon gl-hg-show">
-              <use xlink:href="#logo-mobile"/>
             </svg>
           </a>
 
@@ -17,14 +14,21 @@
           </div>
         </div>
 
-        <!-- todo добавить селект-->
-        <div class="header__link gl-hg-hide">
-          Аналитика
+        <div class="header__control header__select-wrapper gl-hg-hide">
+          <select id="slim-select">
+            <option value="" selected="selected">Аналитика</option>
+            <option value="1">option-1</option>
+            <option value="2">option-2</option>
+            <option value="3">option-3</option>
+            <option value="4">option-4</option>
+          </select>
         </div>
 
-        <a href="" class="header__link gl-hg-hide">
-          Обучение
-        </a>
+        <div class="header__control">
+          <a href="" class="header__link gl-hg-hide">
+            Обучение
+          </a>
+        </div>
       </div>
 
       <div class="header__block">
@@ -42,8 +46,8 @@
           Войти
         </button>
 
-        <button type="button" class="header__btn-burger-wrapper">
-          <span class="header__btn-burger gl-hg-show"></span>
+        <button type="button" class="header__btn-burger-wrapper gl-hg-show">
+          <span class="header__btn-burger"></span>
         </button>
       </div>
     </div>

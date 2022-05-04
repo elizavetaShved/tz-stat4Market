@@ -26,7 +26,7 @@
       height: 434px;
     }
 
-    @include for-md-down {
+    @include for-hg-down {
       content: none;
     }
   }

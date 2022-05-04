@@ -48,6 +48,10 @@
 
     &-left {
       flex: 1 1 100%;
+
+      @include for-md-down {
+        width: 140px;
+      }
     }
   }
 

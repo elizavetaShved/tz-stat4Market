@@ -1,15 +1,16 @@
 <section class="bread-crumbs">
   <div class="gl-page-content">
-    <ul class="bread-crumbs__list">
+    <ul class="bread-crumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
       {{#each bread-crumbs}}
-        <li class="bread-crumbs__item">
+        <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           {{#if this.linkPlug}}
             <span class="bread-crumbs__link bread-crumbs__link-plug">
               {{ this.name }}
             </span>
           {{else}}
-            <a href="{{ this.link }}" class="bread-crumbs__link">
-              {{ this.name }}
+            <a href="{{ this.link }}" class="bread-crumbs__link" itemprop="item">
+              <span itemprop="name">{{ this.name }}</span>
+              <meta itemprop="position" content="{{ this.index }}">
             </a>
           {{/if}}
         </li>

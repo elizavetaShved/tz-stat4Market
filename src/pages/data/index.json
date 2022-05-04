@@ -2,10 +2,12 @@
   "title": "stat4market",
   "bread-crumbs": [
     {
+      "index": 0,
       "name": "Главная",
       "link": ""
     },
     {
+      "index": 1,
       "name": "Обучение",
       "linkPlug": true
     }
